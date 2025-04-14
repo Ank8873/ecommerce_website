@@ -12,7 +12,7 @@ const Footer = () => {
   const whatsappText = encodeURIComponent(
     `Hello! I'm ${userName} and I'm interested in your clothing collection. Can you help me with your products?`
   );
-  const whatsappLink = `https://wa.me/918981572735/?text=${whatsappText}`;
+  const whatsappLink = `https://wa.me/916206695157/?text=${whatsappText}`;
 
   return (
     <motion.footer
@@ -76,9 +76,9 @@ const Footer = () => {
                 className="justify-center hover:bg-primary hover:text-primary-foreground transition-colors h-9 text-sm  w-full"
                 asChild
               >
-                <a href="mailto:arriveforvision@gmail.com" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:ankitvastraa@gmail.com" target="_blank" rel="noopener noreferrer">
                   <Mail className="h-4 w-4 mr-2" />
-                  arriveforvision@gmail.com
+                  ankitvastraa@gmail.com
                 </a>
               </Button>
               
@@ -87,9 +87,9 @@ const Footer = () => {
                 className="justify-center hover:bg-primary hover:text-primary-foreground transition-colors h-9 text-sm  w-full"
                 asChild
               >
-                <a href="tel:+917003382167">
+                <a href="tel:+916206695157">
                   <Phone className="h-4 w-4 mr-2" />
-                  +91 7003382167
+                  +91 6206695157
                 </a>
               </Button>
               

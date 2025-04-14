@@ -13,7 +13,7 @@ function AuthLayout() {
         <div className="max-w-xl space-y-8 text-center text-white">
           <div className="space-y-2">
             <h1 className="text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-50">
-              Singh Style Studio Store
+              Ankit Vastraa Store
             </h1>
             <p className="text-xl text-gray-300 mt-4">Your Premium Fashion Destination</p>
           </div>

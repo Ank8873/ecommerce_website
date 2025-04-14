@@ -149,8 +149,8 @@ function ShoppingHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
-          <img src="/main_logo.png" alt="Singh Style Studio Logo" className="h-8 w-auto" />
-          <span className="font-bold">Singh Style Studio</span>
+          <img src="/main_logo.png" alt="Ankit Vastraa Logo" className="h-8 w-auto" />
+          <span className="font-bold">Ankit Vastraa</span>
         </Link>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>

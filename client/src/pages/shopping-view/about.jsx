@@ -181,10 +181,10 @@ const AboutPage = () => {
       {/* Location Map Section */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Visit us at</h2>
-        <p className="text-muted-foreground mb-4">Find us in Duttapukur Nebadhai near Nebadhui Boy's Primary School</p>
+        <p className="text-muted-foreground mb-4">Find us in Hajipur, Vaishali near Hajipur Railway Zonal</p>
         <div className="w-full rounded-lg overflow-hidden">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m13!1m11!1m3!1d499.4389748753761!2d88.54595122358985!3d22.77184514788397!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1733243542452!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6202.223394521973!2d85.23734089262487!3d25.71197531979849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1744654613601!5m2!1sen!2sin" 
             width="100%" 
             height="450" 
             style={{ border: 0 }} 
@@ -192,7 +192,7 @@ const AboutPage = () => {
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
             className="rounded-lg"
-            title="Google Maps - Duttapukur Nebadhai Location"
+            title="Google Maps - Hajipur, Vaishali"
           />
         </div>
       </section>
@@ -200,7 +200,7 @@ const AboutPage = () => {
       {/* Delivery Locations Section */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Delivery Locations</h2>
-        <p className="text-muted-foreground mb-4">We deliver to all listed locations on the Sealdah to Bangaon</p>
+        <p className="text-muted-foreground mb-4">We deliver to all listed locations in Bihar</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {deliveryLocations.map((location) => (
             <div 
@@ -221,25 +221,25 @@ const AboutPage = () => {
           <p>
             Contact us at{" "}
             <a
-              href="mailto:arriveforvision@gmail.com"
+              href="mailto:ankitvastraa@gmail.com"
               className="text-primary hover:underline"
             >
-              arriveforvision@gmail.com
+              ankitvastraa@gmail.com
             </a>{" "}
             or call us at{" "}
-            <a href="tel:+917003382167" className="text-primary hover:underline">
-              +91 7003382167
+            <a href="tel:+916206695157" className="text-primary hover:underline">
+              +91 6206695157
             </a>
           </p>
           <p className="mt-2">
             For quick responses, chat with us on WhatsApp:{" "}
             <a
-              href="https://wa.me/918981572735"
+              href="https://wa.me/916206695157"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
             >
-              +91 8981572735
+              +91 6206695157
             </a>
           </p>
         </div>

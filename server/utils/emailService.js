@@ -128,7 +128,7 @@ const sendOrderPlacedEmail = async (orderDetails) => {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: 'arriveforvision@gmail.com',
+      to: 'ankitvastraa@gmail.com',
       subject: `New Order Placed - Order ID: ${orderDetails._id}`,
       html: getOrderPlacedTemplate(orderDetails)
     });
@@ -142,7 +142,7 @@ const sendOrderCancelledEmail = async (orderDetails) => {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: 'arriveforvision@gmail.com',
+      to: 'ankitvastraa@gmail.com',
       subject: `Order Cancelled - Order ID: ${orderDetails._id}`,
       html: getOrderCancelledTemplate(orderDetails)
     });

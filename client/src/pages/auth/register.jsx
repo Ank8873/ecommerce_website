@@ -50,7 +50,7 @@ function AuthRegister() {
           transition={{ duration: 0.3 }}
           className="space-y-4"
         >
-          <img src="/main_logo.png" alt="Singh Style Studio Logo" className="h-16 w-auto mx-auto mb-4" />
+          <img src="/main_logo.png" alt="Ankit Vastraa Logo" className="h-16 w-auto mx-auto mb-4" />
           <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
             Create Account
           </h1>
@@ -104,7 +104,7 @@ function AuthRegister() {
             <span className="px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-sm">👶 Kids Collection</span>
           </div>
           <p className="mt-4 text-sm text-gray-500">
-            Join thousands of satisfied customers shopping at Singh Style Studio Store
+            Join thousands of satisfied customers shopping at Ankit Vastraa Store
           </p>
         </div>
       </motion.div>

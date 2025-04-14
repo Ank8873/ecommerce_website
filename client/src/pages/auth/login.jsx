@@ -48,7 +48,7 @@ function AuthLogin() {
           transition={{ duration: 0.3 }}
           className="space-y-4"
         >
-          <img src="/main_logo.png" alt="Singh Style Studio Logo" className="h-16 w-auto mx-auto mb-4" />
+          <img src="/main_logo.png" alt="Ankit Vastraa Logo" className="h-16 w-auto mx-auto mb-4" />
           <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
             Welcome Back
           </h1>
