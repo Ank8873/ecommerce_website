@@ -119,7 +119,7 @@ const Footer = () => {
           className="border-t border-border mt-8 pt-8 text-center text-muted-foreground"
         >
           <p>
-            {currentYear} Arrive For Fashion. All rights reserved.
+            {currentYear} Ankit Vastraa. All rights reserved.
           </p>
         </motion.div>
       </div>

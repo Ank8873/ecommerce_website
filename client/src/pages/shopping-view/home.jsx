@@ -130,7 +130,7 @@ function ShoppingHome() {
                     transition={{ delay: 0.2 }}
                     className="text-5xl md:text-6xl font-bold text-white mb-4"
                   >
-                    Arrive for Fashion
+                    Ankit Vastraa
                   </motion.h1>
                   <motion.p
                     initial={{ y: 20, opacity: 0 }}
