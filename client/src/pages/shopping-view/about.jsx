@@ -33,22 +33,24 @@ const AboutPage = () => {
   };
 
   const deliveryLocations = [
-    { name: "Kolkata Sealdah", code: "SDAH" },
-    { name: "Bidhan Nagar", code: "BNXR" },
-    { name: "Dum Dum", code: "DDJ" },
-    { name: "Dum Dum Cant", code: "DDC" },
-    { name: "Durganagar", code: "DGNR" },
-    { name: "Birati", code: "BBT" },
-    { name: "Bisharpara Kodaliya", code: "BRPK" },
-    { name: "New Barrackpore", code: "NBE" },
-    { name: "Madhyamgram", code: "MMG" },
-    { name: "Hridaypur", code: "HHR" },
-    { name: "Barasat", code: "BT" },
-    { name: "Bamangachhi", code: "BMG" },
-    { name: "Dattapukur", code: "DTK" },
-    { name: "Bira", code: "BIRA" },
-    { name: "Guma", code: "GUMA" },
-    { name: "Ashok Nagar Road", code: "ASKR" }
+    { name: "Patna", code: "PNBE" },
+    { name: "Muzaffarpur", code: "MFP" },
+    { name: "Chhapra", code: "CPR" },
+    { name: "Hajipur", code: "HJP" },
+    { name: "Sonpur", code: "SEE" },
+    { name: "Samastipur", code: "SPJ" },
+    { name: "Barauni", code: "BJU" },
+    { name: "Gaya", code: "GAYA" },
+    { name: "Nawada", code: "NWD" },
+    { name: "Sasaram", code: "SSM" },
+    { name: "Danapur", code: "DNR" },
+    { name: "Darbhanga", code: "DBG" },
+    { name: "Bhagalpur", code: "BGP" },
+    { name: "Kiul", code: "KIUL" },
+    { name: "Buxar", code: "BXR" },
+    { name: "Kishanganj", code: "KNE" },
+    { name: "Khagaria", code: "KGG" },
+    { name: "Katihar", code: "KIR" }
   ];
 
   return (
