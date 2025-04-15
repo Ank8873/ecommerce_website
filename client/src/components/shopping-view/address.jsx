@@ -87,17 +87,24 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
     });
   }
 
-  function handleEditAddress(getCuurentAddress) {
-    setCurrentEditedId(getCuurentAddress?._id);
+  function handleEditAddress(getCurrentAddress) {
+    setCurrentEditedId(getCurrentAddress?._id);
     setFormData({
-      ...formData,
-      address: getCuurentAddress?.address,
-      city: getCuurentAddress?.city,
-      phone: getCuurentAddress?.phone,
-      pincode: getCuurentAddress?.pincode,
-      notes: getCuurentAddress?.notes,
+        ...formData,
+        fullName: {
+            firstName: getCurrentAddress?.firstName || '',
+            lastName: getCurrentAddress?.lastName || ''
+        },
+        mobileNumber: getCurrentAddress?.mobileNumber || '',
+        currentLocation: getCurrentAddress?.currentLocation || '', // Assuming this is a string representation of the location
+        flatHouseNumber: getCurrentAddress?.flatHouseNumber || '',
+        area: getCurrentAddress?.area || '',
+        landmark: getCurrentAddress?.landmark || '',
+        pincode: getCurrentAddress?.pincode || '',
+        townCity: getCurrentAddress?.townCity || '',
+        state: getCurrentAddress?.state || '' // This will be set via a select tag
     });
-  }
+}
 
   function isFormValid() {
     return Object.keys(formData)
