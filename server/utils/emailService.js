@@ -10,6 +10,8 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+console.log(process.env.EMAIL_USER, process.env.EMAIL_PASSWORD);
+console.log(transporter);
 // Email templates
 const getOrderPlacedTemplate = (orderDetails) => {
   return `
@@ -123,12 +125,13 @@ const getOrderCancelledTemplate = (orderDetails) => {
   `;
 };
 
+
 // Email sending functions
 const sendOrderPlacedEmail = async (orderDetails) => {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: 'ankitvastraa@gmail.com',
+      to: 'ankittheengineer88@gmail.com',
       subject: `New Order Placed - Order ID: ${orderDetails._id}`,
       html: getOrderPlacedTemplate(orderDetails)
     });
@@ -142,7 +145,7 @@ const sendOrderCancelledEmail = async (orderDetails) => {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: 'ankitvastraa@gmail.com',
+      to: 'ankittheengineer88@gmail.com',
       subject: `Order Cancelled - Order ID: ${orderDetails._id}`,
       html: getOrderCancelledTemplate(orderDetails)
     });
