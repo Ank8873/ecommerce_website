@@ -1,8 +1,9 @@
-  const paypal = require("../../helpers/paypal");
+const paypal = require("../../helpers/paypal");
 const Order = require("../../models/Order");
 const Cart = require("../../models/Cart");
 const Product = require("../../models/Product");
-const { sendOrderPlacedEmail, sendOrderCancelledEmail } = require("../../utils/emailService");
+const User = require("../../models/User");
+const { sendOrderPlacedEmail, sendOrderCancelledEmail, sendShoppingSummaryEmail } = require("../../utils/emailService");
 
 const createOrder = async (req, res) => {
   try {
@@ -116,7 +117,29 @@ const createOrder = async (req, res) => {
 
       // Send order confirmation email
       await sendOrderPlacedEmail(populatedOrder);
+          
+    // Get user information
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found"
+      });
+    }
+    
+    // Get user's order history
+    const orders = await Order.find({ userId }).sort({ orderDate: -1 });
+    if (!orders || orders.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "No orders found for this user"
+      });
+    }
+    
+    // Send shopping summary email
+    await sendShoppingSummaryEmail(user, orders);
 
+    
       // Clear cart after successful order
       await Cart.findByIdAndDelete(cartId);
 
@@ -408,10 +431,51 @@ const cancelOrder = async (req, res) => {
   }
 };
 
+// Add a new function to send shopping summary email
+const sendShoppingActivity = async (req, res) => {
+  try {
+    const { userId } = req.params;
+    
+    // Get user information
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found"
+      });
+    }
+    
+    // Get user's order history
+    const orders = await Order.find({ userId }).sort({ orderDate: -1 });
+    if (!orders || orders.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "No orders found for this user"
+      });
+    }
+    
+    // Send shopping summary email
+    await sendShoppingSummaryEmail(user, orders);
+    
+    return res.status(200).json({
+      success: true,
+      message: "Shopping summary email sent successfully"
+    });
+  } catch (error) {
+    console.error("Error sending shopping summary:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Error sending shopping summary",
+      error: error.message
+    });
+  }
+};
+
 module.exports = {
   createOrder,
   capturePayment,
   getAllOrdersByUser,
   getOrderDetails,
-  cancelOrder
+  cancelOrder,
+  sendShoppingActivity
 };
